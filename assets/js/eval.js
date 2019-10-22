@@ -120,3 +120,20 @@ var btnExo4 = document.getElementById("btnExo4");
 
     alert("- de 20 ans : "+count20+"\n + de 40 ans : "+count40+"\n Entre 20 et 40 : "+countbtwn);
 });
+//------------------------------------------------------------------------------------------------------------
+//Exercice 5
+
+var btnExo5 = document.getElementById("btnExo5");
+
+btnExo5.addEventListener("click", function(){
+    var nb = parseInt(prompt("Quel nombre multiplier ?"));
+    //Appel de la fonction par event
+    TableMultiplication(nb);
+});
+
+function TableMultiplication(number){
+    for(let i = 0; i != 11; i++){
+        var res = i*number;
+        console.log(i+" x "+number+" = "+res);
+        }
+}
