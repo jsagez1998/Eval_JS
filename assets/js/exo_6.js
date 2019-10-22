@@ -1,6 +1,10 @@
 var tab = ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem", "Samuel", "Stéphane"];
 var name = prompt("Quel nom rechercher ?"); 
 var pos = tab.indexOf(name);
-tab.splice(pos, 1);
-tab.push(""); 
-console.log(tab); 
+if(pos = -1){
+    alert("Le nom n'est pas présent dans le tableau");
+}else{
+    tab.splice(pos, 1);
+    tab.push(""); 
+    console.log(tab); 
+}
