@@ -1,3 +1,4 @@
+//Exercice 1
 //Variables
 var btnExo1 = document.getElementById("btnExo1");
 
@@ -34,4 +35,22 @@ btnExo1.addEventListener("click", function(){
     
     TOT = PAP-REM/100+PORT;
     alert("Le prix est de "+PAP+"€ avec "+REM+"% de remise et "+PORT+"€ de port donc un total de "+TOT+"€");
+});
+
+//---------------------------------------------------------------------------------------------------------------
+//Exercice 2
+
+//Variables
+var btnExo2 = document.getElementById("btnExo2");
+btnExo2.addEventListener("click", function(){
+    var N = parseInt(prompt("Entrez un nombre"));
+    var sum = 0; 
+
+    //Tant que N est différent de 0
+    while(N !=0){
+        N--; // On passe au nombre inférieur
+        sum += N; // on l'additionne à la somme actuelle
+    }
+
+    alert(sum);
 });
