@@ -1,4 +1,6 @@
-TableMultiplication(7);
+var nb = parseInt(prompt("Quel nombre multiplier ?"));
+
+TableMultiplication(nb);
 
 function TableMultiplication(number){
 for(let i = 0; i != 11; i++){
