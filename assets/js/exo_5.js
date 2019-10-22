@@ -1,6 +1,10 @@
-var nb = parseInt(prompt("Afficher la table de quel nombre ?"));
+TableMultiplication(7);
 
+function TableMultiplication(number){
 for(let i = 0; i != 11; i++){
-    var res = i*nb;
-    console.log(i+" x "+nb+" = "+res);
+    var res = i*number;
+    console.log(i+" x "+number+" = "+res);
+    }
 }
+    
+
