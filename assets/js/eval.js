@@ -155,26 +155,3 @@ btnExo6.addEventListener("click", function(){
 }
 });
 //------------------------------------------------------------------------------------------------------------------------
-// Exercice 7
-//Prend en compte tous les caractères alphabétiques
-var oneCaract = RegExp("[a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ]+");
-//Si code postal entrez mettre 5 chiffres
-var numeric5 = RegExp("^[0-9]{5}$");
-// 1 2 ou 3 chiffres pour adresse
-var regexAdress = RegExp("^[0-9]{1,3}(?:\s[a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ]){2,}$");
- 
-var btnForm = document.getElementById("ok");
-var name = document.getElementById("nom");
-var fname = document.getElementById("prenom");
-var cp = document.getElementById("cpostal");
-var adress = document.getElementById("adresse");
-var city = document.getElementById("ville");
-var question = document.getElementById("question");
-var missName = document.getElementById("missName");
-var missFname = document.getElementById("missFname");
-var missCity = document.getElementById("missCity");
-var missQuestion = document.getElementById("missSujet");
-btnForm.addEventListener("click", function(){
-
-    
-});
