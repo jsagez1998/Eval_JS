@@ -112,6 +112,10 @@ legend{
   margin-left: 10px;
 }
 
+.star{
+  color: red;
+  font-display: bold;
+}
     /*-------------------Media queries-------------------*/
     @media screen and (max-width: 768px)
     {

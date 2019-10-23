@@ -145,14 +145,36 @@ var btnExo6 = document.getElementById("btnExo6");
 btnExo6.addEventListener("click", function(){
     var tab = ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem", "Samuel", "Stéphane"];
     var name = prompt("Quel nom rechercher ?"); 
-    var pos = tab.indexOf(name);
-    if(pos < 0){
+    var pos = tab.indexOf(name); //recherche la position de la chaine de caractère recherché
+    if(pos < 0){ //si -1 la chaine n'existe pas ds le tableau
         alert("Le nom n'est pas présent dans le tableau");
     }else{
-        tab.splice(pos, 1);
-        tab.push(""); 
+        tab.splice(pos, 1); // On supprimer 1 élément à partir de la position
+        tab.push(""); // on ajoute un blanc en fin de tableau
         console.log(tab); 
 }
 });
 //------------------------------------------------------------------------------------------------------------------------
 // Exercice 7
+//Prend en compte tous les caractères alphabétiques
+var oneCaract = RegExp("[a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ]+");
+//Si code postal entrez mettre 5 chiffres
+var numeric5 = RegExp("^[0-9]{5}$");
+// 1 2 ou 3 chiffres pour adresse
+var regexAdress = RegExp("^[0-9]{1,3}(?:\s[a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ]){2,}$");
+ 
+var btnForm = document.getElementById("ok");
+var name = document.getElementById("nom");
+var fname = document.getElementById("prenom");
+var cp = document.getElementById("cpostal");
+var adress = document.getElementById("adresse");
+var city = document.getElementById("ville");
+var question = document.getElementById("question");
+var missName = document.getElementById("missName");
+var missFname = document.getElementById("missFname");
+var missCity = document.getElementById("missCity");
+var missQuestion = document.getElementById("missSujet");
+btnForm.addEventListener("click", function(){
+
+    
+});
