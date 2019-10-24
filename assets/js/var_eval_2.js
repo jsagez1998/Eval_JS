@@ -1,6 +1,6 @@
 //Element HTML des zones à remplir
 var btnForm = document.getElementById("send");
-var name = document.getElementById("nom");
+var lname = document.getElementById("nom");
 var fname = document.getElementById("fname");
 var cp = document.getElementById("cpostal");
 var adress = document.getElementById("adresse");
@@ -22,9 +22,11 @@ var missSuj = document.getElementById("missSuj");
 var missQuest = document.getElementById("missQuestion");
 var missGenre = document.getElementById("missGenre");
 var missMail = document.getElementById("missMail");
+var missCP = document.getElementById("missCP");
 
 //RegEx
 var Caract = new RegExp(/^[a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœÉ]+(?:(?:\-| |\')?[a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœÉ]+)*$/);
 var rxAdr = new RegExp(/^(?:\d+\,?(?: [a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœÉ\-]+){2,}|(?:[a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœÉ\-]+(?: [a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœÉ\-]+)+))$/);
 var rxMail = new RegExp(/^\w+[\w\!#\$%&\'\*\+\-\/=\?\^\`\{|\}~]*@[\w\!#\$%&\'\*\+\-\/=\?\^\`\{|\}~]+\.[a-zA-Z]+$/);
 var rxDate =new RegExp(/^(?:\d\d?[\/\- ]\d\d?[\/\- ](?:\d\d)(?:\d\d)?)|(?:(?:\d\d)(?:\d\d)?[\/\- ]\d\d?[\/\- ]\d\d?)$/);
+var rxCP =new RegExp(/^(?:(?:[013-9]\d)|(?:2[\dabAB]))\d{3}/);

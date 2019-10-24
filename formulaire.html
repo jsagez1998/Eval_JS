@@ -32,76 +32,67 @@
             </div> 
         </nav> 
         <a href="index.html"><img src="assets\img\promotion.jpg" id="promo" alt="Bord de piscine pleine d'eau bleu clair avec du beau parquet clair surplombé des mots Promotion sur lames de terrasse "></a></li>
-        <div class="row">
-            <p class="h5 my-3 offset-1 offset-xl-0 mx-xl-3 col-12 col-lg-4">
-              * Ces zones sont obligatoires
-            </p>
-          </div>
-          <form method="GET" action="http://bienvu.net/script.php">
-            <div class="row">
-              <fieldset class="mb-3 p-3 col-10 col-lg-4 offset-1">
-                <legend>Vos Coordonnées</legend>
-                <label for="nom">Votre nom :</label>
-                <span id="missName">*</span>
-                <input type="text" class="form-control" id="nom" name="name" />
-                <label for="fname">Votre prénom :</label>
-                <span id="missFname">*</span>
-                <input type="text" class="form-control" id="fname" name="fname" />
-                <label for="genre">Genre :</label>
-                <span id="missGenre">*</span>
-                <div id="genre" class="mb-2">
-                  <div class="form-check form-check-inline">
-                    <input type="radio" class="form-check-input" id="Fem" name="genre" value="F"/>
-                    <label class="form-check-label" for="Fem">Féminin</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input type="radio" class="form-check-input" id="Mas" name="genre" value="M"/>
-                    <label class="form-check-label" for="Mas">Masculin</label>
-                  </div>
-                </div>
-                <label for="Bday">Date de naissance :</label>
-                <span id="missDate">*</span>
-                <input type="date" class="form-control" id="Bday" name="Date de naissance"/>
-                <label for="cpostal">Code Postal :</label>
-                <span id="missCP"></span>
-                <input  type="text" class="form-control" id="cpostal" name="code_postal"/>
-                <label for="adresse">Adresse :</label>
-                <span id="missAdr"></span>
-                <input type="text" class="form-control" id="adresse" name="adresse" />
-                <label for="mail">Email :</label>
-                <span id="missMail">*</span>
-                <input type="text" class="form-control" id="mail" placeholder="dave.loper@afpa.fr" name="email"/>
-              </fieldset>
-              <fieldset class="mb-3 p-3 col-10 col-lg-4 offset-1">
-                <legend>Votre demande</legend>
-                <label for="suj">Sujet :</label>
-                <span id="missSuj">*</span>
-                <select name="sujet" class="form-control mh-100" id="suj">
-                  <option>Mes commandes</option>
-                  <option>Question sur un produit</option>
-                  <option>Réclamation</option>
-                  <option>Autres</option>
+        <form action="http://bienvu.net/script.php" method="POST">
+            <div class="form-group">
+                <p class="text-danger font-weight-bold">* Informations obligatoires</p>
+                <fieldset>
+                    <legend>Vos coordonnées</legend>
+                    <div>
+                        <label for="nom">Votre nom: <input type="text" id="nom" name="nom"></label>
+                        <span id="missName" class="star">*</span>
+                    </div>
+                    <div>
+                        <label for="fname">Votre prénom : <input type="text" id="fname" name="prenom"></label>
+                        <span id="missFname" class="star">*</span>
+
+                    </div><br>
+                    <div>
+                        <label id="sexe">Sexe: 
+                            <input type="radio" class="sexe" id="Fem" name="sexe" value="femme"> Femme
+                            <input type="radio" class="sexe" id="Mas" name="sexe" value="homme"> Homme
+                        </label>
+                        <span id="missGenre" class="star">*</span>
+                    </div>
+                    <div>
+                        <label for="Bday">Date de naissance: <input type="date" id="Bday" name="ddn"></label>
+                        <span id="missDate" class="star">*</span>
+                    </div>
+                    <div>
+                        <label for="cpostal">Code postal: <input type="text" id="cpostal" name="cpostal"></label>
+                        <span id="missCP" class="star"></span>
+                    </div>
+                    <div>
+                        <label for="adresse">Adresse: <input type="text" id="adresse" name="adresse"></label>
+                        <span id="missAdr" class="star"></span>
+                    </div>
+                    <div>
+                        <label for="mail">Email: <input type="email" id="mail" name="email" placeholder="exemple.exemple@afpa.fr"></label>
+                        <span id="missMail" class="star">*</span>
+                    </div>
+            </fieldset>
+            <fieldset>
+                    <legend>Votre demande</legend>
+        <div>
+            <label for="suj">Sujet:
+                <select id="suj">
+                    <option value="Mes commandes">Mes commandes</option>
+                    <option value="Question sur le produit">Question sur le produit</option>
+                    <option value="Réclamation">Réclamation</option>
+                    <option value="Autres">Autres</option>
                 </select>
-                <label for="question">Votre question :</label>
-                <span id="missQuestion">*</span>
-                <textarea
-                  class="form-control"
-                  id="question"
-                  name="question"
-                ></textarea>
-              </fieldset>
-            </div>
-            <div class="row my-3">
-              <div class="form-check col-10 col-lg-5 offset-1 offset-xl-0 mx-xl-3">
-                <input type="checkbox" name="accord" id="accord" class="form-check-input"/>
-                <label for="accord" class="form-check-label">J'accepte le traitement informatique de ce formulaire</label>
-              </div>
-              <div class="col-10 col-lg-5offset-1 offset-xl-0 mx-xl-3 my-3">
-                <button type="submit" id="send" class="btn btn-secondary">Envoyer</button>
-                <button type="reset" class="btn btn-secondary">Annuler</button>
-              </div>
-            </div>
-          </form>
+            </label>
+            <span id="missSuj" class="star"></span>
+        </div>
+        <label for="question">Votre question: <textarea name="question" id="question" cols="30" rows="3"></textarea></label>
+        <span id="missQuestion" class="star">*</span>
+        </fieldset>
+            <label for="check"><input required type="checkbox" id="check" name="ok"> J'accepte le traitement informatique de ce formulaire</label>
+        </div>
+            <button type="submit" id="send" class="btn btn-info" name="ok">Envoyer</button>
+            <button type="reset" id="cancel" name="cancel" class="btn btn-warning">Annuler</button>
+        </form><br>
+        </div>
+        </div>
     <footer>
         <ul>
             <li><a href="index.html">Mentions légales</a></li>
@@ -112,7 +103,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="assets/js/var_eval_2.js"></script>
+    <script src="assets/js/var_eval_2.js"></script>   
     <script src="assets/js/eval2.js"></script>
     </body>
 </html>
